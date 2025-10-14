@@ -1,0 +1,15 @@
+{
+    "dao_type": "xml",
+    "mysql": {
+        "host": "localhost",
+        "user": "root",
+        "password": "rootpass",
+        "database": "mi_base"
+    },
+    "txt": {
+        "filepath": "usuarios.txt"
+    },
+    "xml": {
+        "filepath": "usuarios.xml"
+    }
+}
