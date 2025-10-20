@@ -1,10 +1,16 @@
 {
-    "dao_type": "xml",
+    "dao_type": "mssql",
     "mysql": {
         "host": "localhost",
         "user": "root",
         "password": "rootpass",
         "database": "mi_base"
+    },
+    "mssql": {
+        "host": "localhost,1433",
+        "user": "sa",
+        "password": "StrongP@ssword123",
+        "database": "master"
     },
     "txt": {
         "filepath": "usuarios.txt"

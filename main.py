@@ -4,8 +4,10 @@ from dao.factory import get_dao_from_config
 def main():
     dao = get_dao_from_config("config.json")
 
-    dao.add_user(User(None, "Luis Arturo", "luis@example.com"))
-    dao.add_user(User(None, "Armando", "armando@example.com"))
+    dao.add_user(User(None, "Juan perez", "juan@example.com"))
+    dao.add_user(User(None, "maria Martinez", "maria@example.com"))
+    dao.add_user(User(None, "alejandra Lopez", "alejandra@example.com"))
+   
 
     print("Usuarios almacenados:")
     for u in dao.get_all_users():
