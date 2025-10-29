@@ -1,12 +1,20 @@
 import pyodbc
 
-conn = pyodbc.connect(
-    "DRIVER={ODBC Driver 18 for SQL Server};"
-    "SERVER=localhost,1433;"
-    "DATABASE=master;"
-    "UID=sa;"
-    "PWD=StrongP@ssword123;"
-    "TrustServerCertificate=yes;"
-)
-print("✅ Conexión exitosa a SQL Server")
-conn.close()
+try:
+    # Cadena de conexión
+    conn = pyodbc.connect(
+        "DRIVER={ODBC Driver 17 for SQL Server};"
+        "SERVER=localhost;"
+        "DATABASE=paradigmas;"
+        "Trusted_Connection=yes;"
+    )
+
+    cursor = conn.cursor()
+    print("Conexión exitosa a SQL Server")
+
+
+except Exception as e:
+    print("Error al conectar:", e)
+
+finally:
+  conn.close()

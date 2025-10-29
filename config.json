@@ -1,16 +1,18 @@
 {
-    "dao_type": "mssql",
+    "dao_type": "sqlserver",
     "mysql": {
         "host": "localhost",
         "user": "root",
         "password": "rootpass",
         "database": "mi_base"
     },
-    "mssql": {
-        "host": "localhost,1433",
-        "user": "sa",
-        "password": "StrongP@ssword123",
-        "database": "master"
+    "sqlserver": {
+        "server": "localhost",
+        "username": "sa",
+        "password": "2509",
+        "database": "paradigmas",
+        "trusted_connection": true,
+        "driver": "ODBC Driver 17 for SQL Server"
     },
     "txt": {
         "filepath": "usuarios.txt"

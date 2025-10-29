@@ -3,6 +3,7 @@ from dao.user_dao_mysql import UserDAOMySQL
 from dao.user_dao_txt import UserDAOTxt
 from dao.user_dao_xml import UserDAOXML
 from dao.user_dao_mssql import UserDAOMSSQL
+from dao.user_dao_sql_server import UserDAOSQLServer
 
 def get_dao_from_config(config_path="config.json"):
     with open(config_path, "r") as f:
@@ -33,5 +34,12 @@ def get_dao_from_config(config_path="config.json"):
             password=mssql_conf["password"],
             database=mssql_conf["database"]
         )
+    elif dao_type == "sqlserver": 
+        sqlserver_conf = config["sqlserver"]
+        return UserDAOSQLServer(
+            server=sqlserver_conf["server"],
+            username=sqlserver_conf["username"],
+            password=sqlserver_conf["password"],
+            database=sqlserver_conf["database"])
     else:
         raise ValueError(f"Tipo de DAO desconocido: {dao_type}")
